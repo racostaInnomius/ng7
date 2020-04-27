@@ -123,6 +123,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "ng7"
+    }
+  },
+  "defaultProject": "ng7",
+  "cli": {
+    "analytics": "1e025361-85de-4b8f-b0af-9d61c704eda2"
+  }
 }
