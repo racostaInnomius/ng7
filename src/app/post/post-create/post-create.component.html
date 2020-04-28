@@ -1,0 +1,25 @@
+<form [formGroup]="addPostForm" (ngSubmit)="onAddPost()">
+  <h5 *ngIf="success">Your form is valid</h5>
+
+  <label>
+    Title:
+    <input formControlName="title" required>
+    <div *ngIf="submitted && addPostForm.controls.title.errors" class="error">
+      <mat-error *ngIf="addPostForm.controls.title.errors.required">Your title is required</mat-error>
+    </div>
+  </label>
+
+  <label>
+    Message:
+    <textarea formControlName="message"></textarea>
+    <div *ngIf="submitted && addPostForm.controls.message.errors" class="error">
+      <mat-error *ngIf="addPostForm.controls.message.errors.required">Your message is required</mat-error>
+    </div>
+  </label>
+  <input type="submit" value="Send Message" class="cta">
+</form>
+
+<div *ngIf="submitted" class="results">
+  <strong>Message:</strong>
+  <span>{{ addPostForm.controls.message.value }}</span>
+</div>
