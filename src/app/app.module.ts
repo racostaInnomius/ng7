@@ -17,6 +17,8 @@ import { MatExpansionModule } from '@angular/material/expansion';
 import { PostListComponent } from './post/post-list/post-list.component';
 import { PostWrapperComponent } from './post/post-wrapper/post-wrapper.component';
 import { PostsService } from './post/posts.service';
+import { HeroChildComponent } from './angExample/compInteraction/hero-child/hero-child.component';
+import { HeroParentComponent } from './angExample/compInteraction/hero-parent/hero-parent.component';
 
 @NgModule({
   declarations: [
@@ -27,7 +29,9 @@ import { PostsService } from './post/posts.service';
     HomeComponent,
     PostCreateComponent,
     PostListComponent,
-    PostWrapperComponent
+    PostWrapperComponent,
+    HeroChildComponent,
+    HeroParentComponent
   ],
   imports: [
     BrowserModule,
