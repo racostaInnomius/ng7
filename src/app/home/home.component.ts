@@ -10,6 +10,7 @@ export class HomeComponent implements OnInit {
 
   h1Style = false;
   users: any;
+  filterUser = '';
 
   constructor(private data: DataService) { }
 

@@ -12,8 +12,12 @@
 
 <button (click)="firstClick()">Click Me!</button>
 
+<div>
+  <input type="text" class="form-control" placeholder="Search ..."
+    name="filterUser" [(ngModel)]="filterUser">
+</div>
 <ul *ngIf="users">
-  <li *ngFor="let user of users.data">
+  <li *ngFor="let user of users.data | filter:filterUser">
     <img [src]= "user.avatar">
     <p>{{ user.first_name }} {{ user.last_name }}</p>
   </li>

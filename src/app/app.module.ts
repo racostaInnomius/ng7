@@ -1,6 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { ReactiveFormsModule } from '@angular/forms';
+import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -19,6 +19,7 @@ import { PostWrapperComponent } from './post/post-wrapper/post-wrapper.component
 import { PostsService } from './post/posts.service';
 import { HeroChildComponent } from './angExample/compInteraction/hero-child/hero-child.component';
 import { HeroParentComponent } from './angExample/compInteraction/hero-parent/hero-parent.component';
+import { FilterPipe } from './pipes/filter.pipe';
 
 @NgModule({
   declarations: [
@@ -31,7 +32,8 @@ import { HeroParentComponent } from './angExample/compInteraction/hero-parent/he
     PostListComponent,
     PostWrapperComponent,
     HeroChildComponent,
-    HeroParentComponent
+    HeroParentComponent,
+    FilterPipe
   ],
   imports: [
     BrowserModule,
@@ -41,7 +43,8 @@ import { HeroParentComponent } from './angExample/compInteraction/hero-parent/he
     BrowserAnimationsModule,
     MatInputModule,
     MatCardModule,
-    MatExpansionModule
+    MatExpansionModule,
+    FormsModule
   ],
   providers: [PostsService],
   bootstrap: [AppComponent]
