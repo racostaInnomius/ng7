@@ -1,7 +1,9 @@
 <h1 [ngClass]="{
   'gray': h1Style,
   'large': !h1Style
-}">Home</h1>
+}">{{ home | uppercase}}</h1>
+
+<div>{{ birthday | date:"fullDate" | uppercase }}</div>
 
 <h1 [style.color]="h1Style ? 'gray' : 'black'">Home1</h1>
 
